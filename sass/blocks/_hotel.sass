@@ -58,7 +58,7 @@
     margin-top: 2px
 .swiper-container
   width: 100%
-  height: 450px
+  height: 100%
   border-radius: 8px
   &::after
     content: ''
@@ -73,6 +73,7 @@
     z-index: 10
 .slider
   width: 728px
+  height: 450px
   &-button
     position: absolute
     top: 50%
@@ -95,8 +96,8 @@
 .swiper
   &-slide
     img
-      width: 100%
       height: 100%
+      object-fit: cover
 .booking
   background-color: $dark
   color: $light
@@ -169,4 +170,6 @@
   width: 347px
   height: 213px
   background-color: #000
+  border-radius: 4px
+  overflow: hidden
     
