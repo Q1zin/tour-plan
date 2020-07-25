@@ -5,11 +5,23 @@
     &-slider
       width: 590px
       &__item
-        &--image
+        &-image
           width: 100%
   .card
     width: 230px
     height: 230px
+  .packet-small
+    width: 300px
+  .packet-big
+    width: 630px
+    &__image
+      width: 315px
+    &__room-text
+      padding-top: 20px
+    &__title
+      margin-bottom: 20px
+    &__about
+      margin-bottom: 40px
 @media (max-width: 992px)
   .container, .newsletter-wrapper
     max-width: 700px
@@ -31,6 +43,7 @@
     &__input
       width: 340px
   .hotel
+    padding-bottom: 40px
     &-grid
       flex-direction: column
     &__slider
@@ -45,10 +58,14 @@
   .map
     border-radius: 10px
   .reviews
+    padding-bottom: 20px
+    padding-top: 20px
     &-slider
       &__item
         max-width: 580px
   .activities
+    &__title
+      margin-bottom: 30px
     &-wrapper
       flex-wrap: wrap
     &__card
@@ -56,6 +73,18 @@
   .card
     width: 340px
     height: 250px
+  .packet-big
+    width: 700px
+    &__image
+      width: 350px
+  .packet-small
+    width: 335px
+  .packages
+    padding-bottom: 20px
+    padding-top: 30px
+    &__title
+      margin-bottom: 30px
+      font-size: 25px
 @media (max-width: 768px)
   .container
     max-width: 576px
@@ -142,6 +171,58 @@
     padding-bottom: 60px
   .reviews
     padding: 40px 0 0 0
+  .packet-small
+    width: 100%
+  .packet-big
+    width: 100%
+    flex-direction: column
+    height: auto
+    &__image
+      object-fit: cover
+      width: 100%
+      height: 250px
+    &__title
+      margin-bottom: 20px
+    &__room
+      display: flex
+      flex-direction: column
+      margin-bottom: 24px
+    &__text
+      font-style: normal
+      font-weight: normal
+      font-size: 12px
+      line-height: 15px
+    &__text:not(:last-child)
+      margin-bottom: 11px
+    &__icon
+      margin-right: 15px
+    &__old-price
+      font-style: normal
+      font-weight: normal
+      font-size: 14px
+      line-height: 18px
+      text-decoration-line: line-through
+    &__new-price-and-button
+      display: flex
+      align-items: center
+      justify-content: space-between
+    &__new-price
+      font-style: normal
+      font-weight: bold
+      font-size: 24px
+      line-height: 30px
+    &__book-now
+      background-color: $primary
+      padding: 10px 12px
+      border: none
+      font-style: normal
+      font-weight: 600
+      font-size: 14px
+      line-height: 19px
+      border-radius: 4px
+      color: #ffffff
+    &__about
+      margin-bottom: 20px
 @media (max-width: 576px)
   .logo
     width: 99px
