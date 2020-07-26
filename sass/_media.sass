@@ -86,6 +86,9 @@
       margin-bottom: 30px
       font-size: 25px
 @media (max-width: 768px)
+  .card:hover
+    box-shadow: 0 8px 17px 0 #ffffff, 0 6px 20px 0 #ffffff
+    transition: 0s all
   .container
     max-width: 576px
     width: 92%
@@ -181,8 +184,11 @@
       object-fit: cover
       width: 100%
       height: 250px
+      flex-basis: auto
     &__title
       margin-bottom: 20px
+    &__room-text
+      flex-basis: auto
     &__room
       display: flex
       flex-direction: column
