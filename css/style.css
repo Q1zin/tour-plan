@@ -619,6 +619,7 @@ img {
 }
 
 .packet-big__image {
+  width: 366px;
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
 }
