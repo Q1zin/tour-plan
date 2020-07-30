@@ -118,6 +118,8 @@
       grid-template-columns: repeat(6, 1fr)
       grid-row-gap: 40px
 @media (max-width: 768px)
+  body
+    padding-top: 78px
   .card:hover
     box-shadow: 0 8px 17px 0 #ffffff, 0 6px 20px 0 #ffffff
     transition: 0s all
@@ -125,8 +127,45 @@
     max-width: 576px
     width: 92%
   .navbar
-    &__search, &__user, &-menu
+    &--mobile
+      &_fixed
+        position: fixed
+        top: 0
+        left: 0
+        right: 0
+        z-index: 99
+    &__user, &__search
+      &--mobile
+        &--hidden
+          display: none
+        &--visible
+          display: flex
+    &__user
+      &--mobile
+        &--visible
+          flex-direction: column
+          justify-content: center
+    &-bottom
       display: none
+      position: fixed
+      left: 0
+      top: 78px
+      right: 0
+      bottom: 0
+      padding-top: 30px
+      &--visible
+        display: block
+    &-menu
+      flex-direction: column
+      &__item
+        margin-bottom: 20px
+        &--mobile
+          &--visible
+            display: block
+            &--user
+              margin-bottom: 27px
+            &--search
+              margin-bottom: 39px
   .menu
     &-button
       display: flex
@@ -143,6 +182,12 @@
         width: 16px
         height: 1px
         background-color: $text-color
+  .user
+    &__name
+      &--light
+        color: $light
+        margin-left: 0
+        margin-top: 10px
   .stars
     flex-basis: auto
   .hotel
@@ -183,7 +228,7 @@
         &::after, &::before
           display: none
       &__button
-        top: 30px
+        top: 20px
         right: 50%
         &--prev
           left: 50%
@@ -265,6 +310,9 @@
     padding-top: 70px
     &__input
       flex-basis: 100%
+  .search
+    &__input
+      width: 245px
 @media (max-width: 576px)
   .logo
     width: 99px
