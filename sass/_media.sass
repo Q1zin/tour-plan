@@ -121,6 +121,10 @@
     &-wrapper
       grid-template-columns: repeat(6, 1fr)
       grid-row-gap: 40px
+    &__additional-information
+      margin-left: 0
+      grid-column-start: 1
+      grid-column-end: 7
 @media (max-width: 768px)
   body
     padding-top: 78px
@@ -383,6 +387,13 @@
       &-form
         grid-row: 7
         grid-column: 1
+    &__additional-information
+      grid-column-end: 2
+      grid-row-start: 8
+      flex-direction: column
+  .additional-information
+    &__links
+      margin-bottom: 10px
     &__form
       &_form-required
         flex-direction: column
