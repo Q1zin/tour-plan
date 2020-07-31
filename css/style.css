@@ -472,6 +472,10 @@ img {
   overflow: hidden;
 }
 
+.map__iframe {
+  width: 100%;
+}
+
 .packages {
   padding: 40px 0 70px 0;
 }
