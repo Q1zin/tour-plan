@@ -87,6 +87,8 @@
   .packages
     padding-bottom: 20px
     padding-top: 30px
+    &-wrapper
+      grid-template-columns: repeat(2, 1fr)
     &__title
       margin-bottom: 30px
       font-size: 25px
@@ -315,6 +317,12 @@
   .search
     &__input
       width: 245px
+  .packages
+    &-wrapper
+      grid-template-columns: 1fr
+    &__packet
+      &-big
+        grid-column: span 1
 @media (max-width: 576px)
   .logo
     width: 99px
@@ -376,7 +384,7 @@
         grid-row: 7
         grid-column: 1
     &__form
-      &--form-required
+      &_form-required
         flex-direction: column
         align-items: start
     &__info

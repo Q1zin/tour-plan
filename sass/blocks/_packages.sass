@@ -10,9 +10,10 @@
     margin-bottom: 65px
     margin-top: 0
   &-wrapper
-    display: flex
-    flex-wrap: wrap
-    justify-content: space-between
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    grid-row-gap: 30px
+    grid-column-gap: 30px
 .packet-small
   border-radius: 8px
   width: 350px
@@ -20,7 +21,6 @@
   background-color: $dark
   color: #ffffff
   position: relative
-  margin-bottom: 30px
   height: 500px
   &__image
     object-fit: cover
@@ -93,9 +93,9 @@
   background-color: $dark
   color: #ffffff
   position: relative
-  margin-bottom: 30px
   display: flex
   height: 500px
+  grid-column: span 2
   &__image
     width: 366px
     flex-basis: 50%
