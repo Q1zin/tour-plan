@@ -23,6 +23,8 @@
     &__about
       margin-bottom: 40px
   .footer
+    &-wrapper
+      grid-template-columns: repeat(4, minmax(min-content, 1fr))
     &__input
       flex-basis: 100%
 @media (max-width: 992px)
@@ -373,6 +375,14 @@
       &-form
         grid-row: 7
         grid-column: 1
+    &__form
+      &--form-required
+        flex-direction: column
+        align-items: start
+    &__info
+      order: -1
+      margin-bottom: 15px
+
 @media (max-width: 360px)
   .reviews
     &__title

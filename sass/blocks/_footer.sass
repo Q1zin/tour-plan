@@ -5,8 +5,8 @@
   padding-bottom: 46px
   &-wrapper
     display: grid
-    grid-template-columns: repeat(4, minmax(min-content, 1fr))
     grid-gap: 20px
+    grid-template-columns: 1fr 1fr 320px 255px
     grid-auto-rows: minmax(40px, min-content)
     align-items: start
   &__logo
@@ -36,6 +36,11 @@
     align-items: center
     justify-content: space-between
     flex-wrap: wrap
+    &--form-required
+      display: flex
+      align-items: center
+      justify-content: space-between
+      flex-basis: 100%
   &__ul
     padding: 0
     margin: 0
@@ -87,6 +92,8 @@
     flex-basis: 100%
     margin-bottom: 23px
     min-height: 123px
+    max-height: 123px
+    resize: none
   &__button 
     min-width: 160px
     min-height: 50px
