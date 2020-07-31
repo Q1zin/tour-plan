@@ -2245,10 +2245,7 @@ template {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .additional-information__links {
-    margin-bottom: 10px;
-  }
-  .additional-information__form_form-required {
+  .footer__form_form-required {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -2256,6 +2253,18 @@ template {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: start;
+  }
+  .footer__links {
+    margin-bottom: 10px;
+  }
+  .footer__info {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+    margin-bottom: 15px;
+  }
+  .additional-information__links {
+    margin-bottom: 10px;
   }
   .additional-information__info {
     -webkit-box-ordinal-group: 0;
