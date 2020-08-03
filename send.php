@@ -3,9 +3,10 @@
 require 'phpmailer/PHPMailer.php';
 require 'phpmailer/SMTP.php';
 require 'phpmailer/Exception.php';
+
 if (isset($_POST["send-email"])){
     $email = $_POST['email'];
-    $title = "Новое обращение Best Tour Plan";
+    $title = "Новое обращение по email";
     $body = "
     <h2>Новое обращение</h2>
     <b>Email:</b><br>$email
@@ -17,7 +18,7 @@ if (isset($_POST["send-message"])){
     $phone = $_POST['phone'];
     $message = $_POST['message'];
     $email = $_POST['email'];
-    $title = "Новое обращение Best Tour Plan";
+    $title = "Новое обращение по footer";
     $body = "
     <h2>Новое обращение</h2>
     <b>Имя:</b> $name<br>
@@ -26,6 +27,33 @@ if (isset($_POST["send-message"])){
 ";
 }
 
+if (isset($_POST["send-booking"])){
+    $name = $_POST['name'];
+    $phone = $_POST['phone'];
+    $message = $_POST['message'];
+    $email = $_POST['email'];
+    $title = "Новое обращение по booking";
+    $body = "
+    <h2>Новое обращение</h2>
+    <b>Имя:</b> $name<br>
+    <b>Телефон:</b> $phone<br><br>
+    <b>Сообщение:</b><br>$message<br>
+";
+}
+
+if (isset($_POST["send-application"])){
+    $name = $_POST['name'];
+    $phone = $_POST['phone'];
+    $message = $_POST['message'];
+    $email = $_POST['email'];
+    $title = "Новое обращение по application";
+    $body = "
+    <h2>Новое обращение</h2>
+    <b>Имя:</b> $name<br>
+    <b>Телефон:</b> $phone<br><br>
+    <b>Сообщение:</b><br>$message<br>
+";
+}
 
 // Настройки PHPMailer
 $mail = new PHPMailer\PHPMailer\PHPMailer();
