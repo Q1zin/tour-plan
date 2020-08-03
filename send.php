@@ -9,7 +9,7 @@ if (isset($_POST["send-email"])){
     $title = "Новое обращение по email";
     $body = "
     <h2>Новое обращение</h2>
-    <b>Email:</b><br>$email
+    <b>Email:</b> $email
 ";
 }
 
@@ -22,8 +22,9 @@ if (isset($_POST["send-message"])){
     $body = "
     <h2>Новое обращение</h2>
     <b>Имя:</b> $name<br>
-    <b>Телефон:</b> $phone<br><br>
-    <b>Сообщение:</b><br>$message<br>
+    <b>Телефон:</b> $phone<br>
+    <b>Почта:</b> $email<br>
+    <b>Сообщение:</b><br>$message
 ";
 }
 
@@ -36,8 +37,9 @@ if (isset($_POST["send-booking"])){
     $body = "
     <h2>Новое обращение</h2>
     <b>Имя:</b> $name<br>
-    <b>Телефон:</b> $phone<br><br>
-    <b>Сообщение:</b><br>$message<br>
+    <b>Телефон:</b> $phone<br>
+    <b>Почта:</b> $email<br>
+    <b>Сообщение:</b><br>$message
 ";
 }
 
@@ -50,8 +52,9 @@ if (isset($_POST["send-application"])){
     $body = "
     <h2>Новое обращение</h2>
     <b>Имя:</b> $name<br>
-    <b>Телефон:</b> $phone<br><br>
-    <b>Сообщение:</b><br>$message<br>
+    <b>Телефон:</b> $phone<br>
+    <b>Почта:</b> $email<br>
+    <b>Сообщение:</b><br>$message
 ";
 }
 
