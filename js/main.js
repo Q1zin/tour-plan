@@ -43,4 +43,22 @@ $(document).ready(function () {
     modalOverlay.removeClass("modal__overlay--visible");
     modalDialog.removeClass("modal__dialog--visible");
   }
+
+  //Обработка форм
+  $(".form").each(function () {
+    $(this).validate({
+      errorClass: "invalid",
+      messages: {
+        name: {
+          required: "Full name is required",
+        },
+        email: {
+          required: "Email is required",
+        },
+        phone: {
+          required: "Phone is required",
+        },
+      },
+    });
+  });
 });

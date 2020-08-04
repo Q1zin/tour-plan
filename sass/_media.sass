@@ -26,7 +26,8 @@
     &-wrapper
       grid-template-columns: repeat(4, minmax(min-content, 1fr))
     &__input
-      flex-basis: 100%
+      &-group
+        flex-basis: 100%
 @media (max-width: 992px)
   .container, .newsletter-wrapper
     max-width: 700px
@@ -95,7 +96,8 @@
   .footer
     padding-top: 85px
     &__input
-      flex-basis: 49%
+      &-group
+        flex-basis: 49%
     &__logo
       grid-row: 1 / 2
       grid-column: span 2
@@ -317,7 +319,8 @@
   .footer
     padding-top: 70px
     &__input
-      flex-basis: 100%
+      &-group
+        flex-basis: 100%
   .search
     &__input
       width: 245px
