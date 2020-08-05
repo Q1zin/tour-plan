@@ -31,6 +31,8 @@
 @media (max-width: 992px)
   .container, .newsletter-wrapper
     max-width: 700px
+  .newsletter
+    padding: 92px 0 92px 0
   .logo
     width: 132px
   .navbar
@@ -49,7 +51,7 @@
     &__input
       width: 340px
   .hotel
-    padding-bottom: 40px
+    padding-bottom: 60px
     &-grid
       flex-direction: column
     &__slider
@@ -64,14 +66,17 @@
   .map
     border-radius: 10px
   .reviews
-    padding-bottom: 20px
-    padding-top: 20px
+    padding-bottom: 60px
+    padding-top: 40px
+    &__title
+      font-size: 30px
+      line-height: 38px
+      margin-bottom: 50px
     &-slider
       &__item
         max-width: 580px
   .activities
-    &__title
-      margin-bottom: 30px
+    padding-bottom: 70px
     &-wrapper
       flex-wrap: wrap
     &__card
@@ -86,8 +91,8 @@
   .packet-small
     width: 335px
   .packages
-    padding-bottom: 20px
-    padding-top: 30px
+    padding-bottom: 40px
+    padding-top: 5px
     &-wrapper
       grid-template-columns: repeat(2, 1fr)
     &__title
@@ -264,6 +269,12 @@
     padding-bottom: 40px
   .reviews
     padding: 40px 0 0 0
+    &-slider
+      &__button
+        &--next
+          margin-right: -105px
+        &--prev
+          margin-left: -105px
   .packet-small
     width: 100%
   .packet-big
@@ -340,29 +351,37 @@
   .logo
     width: 99px
   .hotel
-    padding-bottom: 30px
+    padding-bottom: 40px
     &__slider
       margin-bottom: 20px
     &-slider
       height: 250px
   .newsletter
     padding: 76px 0 83px 0
-    &__title
+    &-title
       margin-bottom: 37px
+      font-size: 20px
+      line-height: 25px
+      &__strong
+        font-size: 30px
+        line-height: 38px
   .subscribe
     width: 100%
     &__input
       padding-left: 10px
   .reviews
+    padding-bottom: 50px
     &-slider
       &__text
         width: 300px
-  .reviews
+        margin-top: 0
+        margin-bottom: 0
     &__title
-      font-size: 25px
-      line-height: 30px
-      margin-bottom: 50px
+      font-size: 18px
+      line-height: 23px
+      margin-bottom: 42px
   .activities
+    padding-bottom: 60px
     &__title
       font-size: 18px
       line-height: 23px
@@ -453,6 +472,9 @@
           display: flex
           flex-direction: column
           align-items: start
+  .hotel
+    &-slider
+      height: 180px
     &__info
       order: -1
       margin-bottom: 10px
@@ -461,7 +483,11 @@
     &__title
       font-size: 18px
       line-height: 23px
+      width: 245px
+      display: block
+      margin: auto
       margin-bottom: 42px
     &-slider
       &__text
         width: 220px
+      
