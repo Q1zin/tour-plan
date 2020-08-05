@@ -130,9 +130,6 @@
 @media (max-width: 768px)
   body
     padding-top: 78px
-  .card:hover
-    box-shadow: 0 8px 17px 0 #ffffff, 0 6px 20px 0 #ffffff
-    transition: 0s all
   .container
     max-width: 576px
     width: 92%
@@ -245,7 +242,7 @@
           margin-left: -65px
           transform: translate(-50%, 0)
         &--next
-          rgiht: 50%
+          right: 50%
           margin-right: -65px
           transform: translate(50%, 0)
       &__text
@@ -256,6 +253,12 @@
   .card
     width: 48%
     height: 255px
+    &:hover
+      box-shadow: none
+      transition: 0s all
+      & img 
+        transform: scale(1)
+        transition: 0s all
   .activities
     padding-top: 40px
     padding-bottom: 40px

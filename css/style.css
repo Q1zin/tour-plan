@@ -7,6 +7,7 @@ body {
   font-family: 'Muli', sans-serif;
   color: #333333;
   background-color: #f5fafe;
+  overflow-x: hidden;
 }
 
 .container {
@@ -1987,12 +1988,6 @@ template {
   body {
     padding-top: 78px;
   }
-  .card:hover {
-    -webkit-box-shadow: 0 8px 17px 0 #ffffff, 0 6px 20px 0 #ffffff;
-            box-shadow: 0 8px 17px 0 #ffffff, 0 6px 20px 0 #ffffff;
-    -webkit-transition: 0s all;
-    transition: 0s all;
-  }
   .container {
     max-width: 576px;
     width: 92%;
@@ -2155,7 +2150,7 @@ template {
             transform: translate(-50%, 0);
   }
   .reviews-slider__button--next {
-    rgiht: 50%;
+    right: 50%;
     margin-right: -65px;
     -webkit-transform: translate(50%, 0);
             transform: translate(50%, 0);
@@ -2170,6 +2165,18 @@ template {
   .card {
     width: 48%;
     height: 255px;
+  }
+  .card:hover {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    -webkit-transition: 0s all;
+    transition: 0s all;
+  }
+  .card:hover img {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transition: 0s all;
+    transition: 0s all;
   }
   .activities {
     padding-top: 40px;
