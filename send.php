@@ -90,5 +90,5 @@ try {
         $status = "Сообщение не было отправлено. Причина ошибки: {$mail->ErrorInfo}";
     }
 
-    // Отображение результата
-    echo json_encode(["result" => $result, "resultfile" => $rfile, "status" => $status]);
+    header('Location: thanksyou.html');
+    exit;

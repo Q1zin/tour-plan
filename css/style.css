@@ -1446,6 +1446,21 @@ img {
   color: #E0E0E0;
 }
 
+.thanks-you {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.thanks-you__title {
+  font-size: 30px;
+  margin-top: 0;
+}
+
+.thanks-you__text {
+  font-size: 18px;
+  margin-bottom: 0;
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
