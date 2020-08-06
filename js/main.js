@@ -97,4 +97,25 @@ $(document).ready(function () {
     },
   });
   $(".selectonfocus").mask("00/00/0000", { selectOnFocus: true });
+
+  [].forEach.call(document.querySelectorAll("img[data-src]"), function (img) {
+    img.setAttribute("src", img.getAttribute("data-src"));
+    img.onload = function () {
+      img.removeAttribute("data-src");
+    };
+  });
+
+  // $(".map").click(function () {
+  //   $(this).prepend(
+  //     "<iframe class='map__iframe' src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4700.387090671949!2d98.29632412925388!3d7.838551464981311!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x305025650c33dbab%3A0xa67a542329d011e1!2z0J_RhdGD0LrQtdGCLCDQmtCw0YDQvtC9LCDQntGC0LXQu9GMINCl0LjQu9GC0L7QvQ!5e0!3m2!1sru!2sru!4v1595515530392!5m2!1sru!2sru' height='213' style='border: 0;' allowfullscreen='' aria-hidden='false' tabindex='0'></iframe >"
+  //   );
+  // });
+
+  function googleMap() {
+    $(".map").prepend(
+      "<iframe class='map__iframe' src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4700.387090671949!2d98.29632412925388!3d7.838551464981311!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x305025650c33dbab%3A0xa67a542329d011e1!2z0J_RhdGD0LrQtdGCLCDQmtCw0YDQvtC9LCDQntGC0LXQu9GMINCl0LjQu9GC0L7QvQ!5e0!3m2!1sru!2sru!4v1595515530392!5m2!1sru!2sru' height='213' style='border: 0;' allowfullscreen='' aria-hidden='false' tabindex='0'></iframe >"
+    );
+  }
+
+  setTimeout(googleMap, 2000);
 });
