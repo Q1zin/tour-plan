@@ -1,0 +1,31 @@
+.gm-style .gm-style-mtc label,
+.gm-style .gm-style-mtc div {
+  font-weight: 400;
+}
+
+.gm-style .gm-style-cc span,
+.gm-style .gm-style-cc a,
+.gm-style .gm-style-mtc div {
+  font-size: 10px;
+}
+
+.gm-style {
+  font: 400 11px sans-serif;
+  text-decoration: none;
+}
+.gm-style img {
+  max-width: none;
+}
+
+@media print {
+  .gm-style .gmnoprint,
+  .gmnoprint {
+    display: none;
+  }
+}
+@media screen {
+  .gm-style .gmnoscreen,
+  .gmnoscreen {
+    display: none;
+  }
+}

@@ -118,4 +118,61 @@ $(document).ready(function () {
   }
 
   setTimeout(googleMap, 2000);
+
+  var map, head, insertBefore, appendChild;
+  head = document.getElementsByTagName("head")[0];
+  insertBefore = head.insertBefore;
+  appendChild = head.appendChild;
+  head.insertBefore = function (newElement, referenceElement) {
+    if (newElement.type === "text/css") {
+      return;
+    }
+    insertBefore.call(head, newElement, referenceElement);
+  };
+  head.appendChild = function (newElement, referenceElement) {
+    if (newElement.type === "text/css") {
+      return;
+    }
+    appendChild.call(head, newElement, referenceElement);
+  };
+  function initMap() {
+    map = new google.maps.Map(document.getElementById("map"), {
+      center: { lat: -34.397, lng: 150.644 },
+      zoom: 8,
+    });
+  }
+
+  var map, head, insertBefore, appendChild, mapApi;
+
+  head = document.getElementsByTagName("head")[0];
+  insertBefore = head.insertBefore;
+  appendChild = head.appendChild;
+
+  if (document.getElementById("map") !== null) {
+    mapApi = document.createElement("script");
+    mapApi.src =
+      "https://maps.googleapis.com/maps/api/js?key=AIzaSyB47M01hgdZsYqkAQuf3EpJcM1KHY496x4&callback=initMap"; // set the source of the script to your script
+    document.getElementsByTagName("head")[0].appendChild(mapApi);
+  }
+
+  function initMap() {
+    map = new google.maps.Map(document.getElementById("map"), {
+      center: { lat: -34.397, lng: 150.644 },
+      zoom: 8,
+    });
+  }
+
+  head.insertBefore = function (newElement, referenceElement) {
+    if (newElement.type === "text/css") {
+      return;
+    }
+    insertBefore.call(head, newElement, referenceElement);
+  };
+
+  head.appendChild = function (newElement, referenceElement) {
+    if (newElement.type === "text/css") {
+      return;
+    }
+    appendChild.call(head, newElement, referenceElement);
+  };
 });
