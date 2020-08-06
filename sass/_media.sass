@@ -72,6 +72,8 @@
       line-height: 38px
       margin-bottom: 50px
     &-slider
+      &__text
+        width: 460px
       &__item
         max-width: 580px
   .activities
@@ -142,6 +144,10 @@
       margin-left: 0
       grid-row: 5 / 6
       grid-column: span 3
+  .logo
+    width: auto
+    &__image
+      width: 132px
 @media (max-width: 768px)
   .map
     background: url(../img/map-2.jpg) #fff no-repeat
@@ -178,7 +184,9 @@
       bottom: 0
       padding-top: 30px
       &--visible
-        display: block
+        display: block 
+        overflow-y: scroll
+        z-index: 150
     &-menu
       flex-direction: column
       &__item
@@ -282,7 +290,10 @@
   .reviews
     padding: 40px 0 0 0
     &-slider
+      &__text
+        width: 460px
       &__button
+        top: 29px
         &--next
           margin-right: -105px
         &--prev
@@ -493,7 +504,6 @@
     &__input
       width: 90%
       margin: auto
-      padding: 12px 16px
       margin-bottom: 2px
     &__message
       width: 90%
@@ -511,6 +521,8 @@
   .map
     background: url(../img/map-4.jpg) #fff no-repeat
 @media (max-width: 430px)
+  .modal__title
+    font-size: 16px
   .modal
     &__form
       display: flex
@@ -528,6 +540,13 @@
     &__info
       order: -1
       margin-bottom: 10px
+@media (max-width: 380px)
+  .modal__title
+    font-size: 14px
+    width: 100px
+    display: block
+    margin: auto
+    margin-bottom: 8px
 @media (max-width: 360px)
   .map
     background: url(../img/map-5.jpg) #fff no-repeat
@@ -550,3 +569,35 @@
 @media (max-width: 330px)
   .map
     background: url(../img/map-6.jpg) #fff no-repeat
+@media (max-height: 520px) and (max-width: 992px)
+  .modal__dialog
+    padding-top: 10px
+    padding-bottom: 10px
+  .modal__button
+    padding: 13px 53px
+  .modal__title
+    font-size: 14px
+    width: auto
+    display: block
+    margin-bottom: 8px
+@media (max-height: 460px) and (max-width: 992px)
+  .modal
+    &__input
+      padding: 10px 12px
+      &:not(:first-child)
+        margin-top: 7px
+    &__message
+      height: 60px
+      margin-top: 7px
+      margin-bottom: 7px
+    &__form
+      &_form
+        &-required
+          margin-top: 5px
+@media (max-height: 520px) and (max-width: 350px)
+  .modal__title
+    font-size: 14px
+    width: 100px
+    display: block
+    margin: auto
+    margin-bottom: 8px
