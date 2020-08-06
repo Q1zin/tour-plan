@@ -569,7 +569,7 @@
 @media (max-width: 330px)
   .map
     background: url(../img/map-6.jpg) #fff no-repeat
-@media (max-height: 520px) and (max-width: 992px)
+@media (max-height: 520px) and (max-width: 1200px)
   .modal__dialog
     padding-top: 10px
     padding-bottom: 10px
@@ -577,6 +577,7 @@
     padding: 13px 53px
   .modal__title
     font-size: 14px
+    line-height: 18px
     width: auto
     display: block
     margin-bottom: 8px
@@ -601,3 +602,10 @@
     display: block
     margin: auto
     margin-bottom: 8px
+@media (max-height: 350px) and (max-width: 350px)
+  .modal
+    &__message
+      height: 50px
+  .modal__title
+    font-size: 12px
+    line-height: 15px
