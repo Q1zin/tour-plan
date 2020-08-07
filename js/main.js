@@ -61,55 +61,20 @@ $(document).ready(function () {
       },
     });
   });
-  AOS.init();
 
-  $(".date").mask("00/00/0000");
-  $(".time").mask("00:00:00");
-  $(".date_time").mask("00/00/0000 00:00:00");
-  $(".cep").mask("00000-000");
-  $(".phone").mask("0000-0000");
-  $(".phone_with_ddd").mask("(00) 0000-0000");
+  $(".newsletter__subscribe").each(function () {
+    $(this).validate({
+      errorClass: "invalid--2",
+      messages: {
+        email: {
+          required: "Email is required",
+        },
+      },
+    });
+  });
+
   $(".phone_us").mask("+7 (000) 000-00-00");
-  $(".mixed").mask("AAA 000-S0S");
-  $(".cpf").mask("000.000.000-00", { reverse: true });
-  $(".cnpj").mask("00.000.000/0000-00", { reverse: true });
-  $(".money").mask("000.000.000.000.000,00", { reverse: true });
-  $(".money2").mask("#.##0,00", { reverse: true });
-  $(".ip_address").mask("0ZZ.0ZZ.0ZZ.0ZZ", {
-    translation: {
-      Z: {
-        pattern: /[0-9]/,
-        optional: true,
-      },
-    },
-  });
-  $(".ip_address").mask("099.099.099.099");
-  $(".percent").mask("##0,00%", { reverse: true });
-  $(".clear-if-not-match").mask("00/00/0000", { clearIfNotMatch: true });
-  $(".placeholder").mask("00/00/0000", { placeholder: "__/__/____" });
-  $(".fallback").mask("00r00r0000", {
-    translation: {
-      r: {
-        pattern: /[\/]/,
-        fallback: "/",
-      },
-      placeholder: "__/__/____",
-    },
-  });
-  $(".selectonfocus").mask("00/00/0000", { selectOnFocus: true });
-
-  [].forEach.call(document.querySelectorAll("img[data-src]"), function (img) {
-    img.setAttribute("src", img.getAttribute("data-src"));
-    img.onload = function () {
-      img.removeAttribute("data-src");
-    };
-  });
-
-  // $(".map").click(function () {
-  //   $(this).prepend(
-  //     "<iframe class='map__iframe' src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4700.387090671949!2d98.29632412925388!3d7.838551464981311!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x305025650c33dbab%3A0xa67a542329d011e1!2z0J_RhdGD0LrQtdGCLCDQmtCw0YDQvtC9LCDQntGC0LXQu9GMINCl0LjQu9GC0L7QvQ!5e0!3m2!1sru!2sru!4v1595515530392!5m2!1sru!2sru' height='213' style='border: 0;' allowfullscreen='' aria-hidden='false' tabindex='0'></iframe >"
-  //   );
-  // });
+  $(".phone_us--2").mask("+7 (000) 000-00-00");
 
   function googleMap() {
     $(".map").prepend(

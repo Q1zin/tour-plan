@@ -15,7 +15,6 @@
     />
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="css/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="css/aos.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
@@ -185,28 +184,28 @@
               <div class="swiper-slide hotel-slider__item">
                 <img
                   class="hotel-slider__item-image"
-                  data-src="img/slide-2.jpg"
+                  src="img/slide-2.jpg"
                   alt="slide"
                 />
               </div>
               <div class="swiper-slide hotel-slider__item">
                 <img
                   class="hotel-slider__item-image"
-                  data-src="img/slide-3.jpg"
+                  src="img/slide-3.jpg"
                   alt="slide"
                 />
               </div>
               <div class="swiper-slide hotel-slider__item">
                 <img
                   class="hotel-slider__item-image"
-                  data-src="img/slide-4.jpg"
+                  src="img/slide-4.jpg"
                   alt="slide"
                 />
               </div>
               <div class="swiper-slide hotel-slider__item">
                 <img
                   class="hotel-slider__item-image"
-                  data-src="img/slide-5.jpg"
+                  src="img/slide-5.jpg"
                   alt="slide"
                 />
               </div>
@@ -261,7 +260,7 @@
               <!-- /.booking__call-center -->
               <button
                 data-toggle="modal"
-                data-href="#modal__application"
+                data-href="#modal__booking"
                 class="button booking__botton"
               >
                 View Other Options
@@ -282,7 +281,7 @@
         <div class="packages-wrapper">
           <div class="packet-big packages__packet-big">
             <img
-              data-src="img/packet-1.jpg"
+              src="img/packet-1.jpg"
               alt="Hotel Blue Haven"
               class="packet-big__image"
             />
@@ -351,7 +350,7 @@
           <!-- /.packet-big /.packages__packet-big -->
           <div class="packet-small packages__packet-small">
             <img
-              data-src="img/packet-2.jpg"
+              src="img/packet-2.jpg"
               alt="LUX* Belle Mare"
               class="packet-small__image"
             />
@@ -406,7 +405,7 @@
           <!-- /.packet-small /.packages__packet-small -->
           <div class="packet-small packages__packet-small">
             <img
-              data-src="img/packet-3.jpg"
+              src="img/packet-3.jpg"
               alt="White Palace"
               class="packet-small__image"
             />
@@ -461,7 +460,7 @@
           <!-- /.packet-small /.packages__packet-small -->
           <div class="packet-small packages__packet-small">
             <img
-              data-src="img/packet-4.jpg"
+              src="img/packet-4.jpg"
               alt="Luxury Place"
               class="packet-small__image"
             />
@@ -516,7 +515,7 @@
           <!-- /.packet-small /.packages__packet-small -->
           <div class="packet-small packages__packet-small">
             <img
-              data-src="img/packet-5.jpg"
+              src="img/packet-5.jpg"
               alt="Hotel Five Star"
               class="packet-small__image"
             />
@@ -592,10 +591,12 @@
           class="subscribe newsletter__subscribe"
         >
           <input
-            type="text"
+            type="email"
             class="subscribe__input"
             placeholder="Your email address"
             name="email"
+            required
+            minlength="5"
           />
           <button
             name="send-email"
@@ -737,7 +738,7 @@
             data-aos-delay="100"
           >
             <img
-              data-src="img/activity-1.jpg"
+              src="img/activity-1.jpg"
               alt="The curious corner of chamarel"
               class="card__image"
             />
@@ -757,7 +758,7 @@
             data-aos-delay="150"
           >
             <img
-              data-src="img/activity-2.jpg"
+              src="img/activity-2.jpg"
               alt="Gymkhana club golf course"
               class="card__image"
             />
@@ -777,7 +778,7 @@
             data-aos-delay="200"
           >
             <img
-              data-src="img/activity-3.jpg"
+              src="img/activity-3.jpg"
               alt="Tamarind falls hiking trip - full day"
               class="card__image"
             />
@@ -799,7 +800,7 @@
             data-aos-delay="250"
           >
             <img
-              data-src="img/activity-4.jpg"
+              src="img/activity-4.jpg"
               alt="The blue marine discovery quest"
               class="card__image"
             />
@@ -825,7 +826,7 @@
             <img
               src="img/vertical-logo.svg"
               alt="Logo: Best Tour Plan"
-              class="footer__logo--image"
+              class="logo__image"
             />
           </a>
           <div class="footer__list footer__categories">
@@ -1063,61 +1064,6 @@
       <!-- /.container -->
     </footer>
     <!-- /.footer -->
-    <div class="modal" id="modal__application">
-      <div class="modal__overlay"></div>
-      <!-- /.modal__overlay -->
-      <div class="modal__dialog">
-        <a href="#" class="modal__close"
-          ><img src="img/close.svg" alt="Icon: close"
-        /></a>
-        <h3 class="modal__title modal__title--mb-15">
-          Submit your application
-        </h3>
-        <form action="send.php" method="POST" class="modal__form form">
-          <input
-            type="text"
-            class="input modal__input"
-            placeholder="Your Full Name*"
-            name="name"
-            required
-          />
-          <input
-            type="tel"
-            class="input modal__input phone_us"
-            placeholder="Phone Number*"
-            name="phone"
-            required
-            id="phone_us"
-            maxlength="18"
-            minlength="18"
-          />
-          <input
-            type="email"
-            class="input modal__input"
-            placeholder="Email*"
-            name="email"
-            required
-          />
-          <textarea
-            class="modal__message"
-            placeholder="Message"
-            name="message"
-          ></textarea>
-          <div class="modal__form_form-required">
-            <button
-              name="send-application"
-              class="button modal__button"
-              type="submit"
-            >
-              Send
-            </button>
-            <span class="modal__info">* Required Fields</span>
-          </div>
-        </form>
-      </div>
-      <!-- /.modal__dialog -->
-    </div>
-    <!-- /.modal -->
     <div class="modal" id="modal__booking">
       <div class="modal__overlay"></div>
       <!-- /.modal__overlay -->
@@ -1142,7 +1088,7 @@
             placeholder="Phone Number*"
             name="phone"
             required
-            id="phone_us"
+            id="phone_us--2"
             maxlength="18"
             minlength="18"
           />
@@ -1177,7 +1123,6 @@
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/parallax.js"></script>
     <script src="js/jquery.validate.min.js"></script>
-    <script src="js/aos.js"></script>
     <script src="js/jquery.mask.min.js"></script>
     <script src="js/main.js"></script>
   </body>

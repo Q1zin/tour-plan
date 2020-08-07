@@ -41,8 +41,7 @@
   position: relative
   width: 350px
   height: 55px           
-  border-radius: 4px
-  overflow: hidden                                                       
+  border-radius: 4px                                                    
   &__input
     position: absolute
     width: 100%
@@ -53,6 +52,8 @@
     font-weight: 300
     font-size: 14px
     line-height: 18px
+    color: black
+    border-radius: 4px
   &__button
     position: absolute
     right: 0
@@ -62,9 +63,16 @@
     background-color: $primary
     color: $light
     min-width: 65px
-  &__button
+    border-radius: 0 4px 4px 0
     font-style: normal
     font-weight: bold
     font-size: 12px
     line-height: 15px
-
+.invalid
+  &--2
+    position: absolute
+    top: 55px
+.subscribe__input.invalid--2
+  position: absolute
+  top: 0
+  color: black
