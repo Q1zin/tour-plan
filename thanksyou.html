@@ -5,20 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Best Tour Plan - Thanks You</title>
     <link
+      rel="preload"
       href="https://fonts.googleapis.com/css2?family=Muli:wght@400;700&family=Nunito:wght@400;700;800&display=swap"
+      as="style"
+    />
+    <link
       rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Muli:wght@400;700&family=Nunito:wght@400;700;800&display=swap"
     />
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/aos.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
-
   <body>
     <header class="navbar navbar--mobile_fixed">
       <div class="container">
         <div class="navbar-top">
-          <a href="#" class="logo">
+          <a href="index.html" class="logo">
             <img
               src="img/horizontal-logo.svg"
               alt="Logo: Best Tour Plan"
@@ -38,6 +42,7 @@
               <img src="img/search.svg" alt="Icon: search" />
             </button>
           </form>
+
           <a href="#" class="user navbar__user navbar__user--mobile--hidden">
             <img
               src="img/user-avatar.jpg"
@@ -130,11 +135,13 @@
     <footer class="footer">
       <div class="container">
         <div class="footer-wrapper">
-          <img
-            src="img/vertical-logo.svg"
-            alt="Logo: Best Tour Plan"
-            class="logo footer__logo"
-          />
+          <a href="index.html" class="logo footer__logo">
+            <img
+              src="img/vertical-logo.svg"
+              alt="Logo: Best Tour Plan"
+              class="footer__logo--image"
+            />
+          </a>
           <div class="footer__list footer__categories">
             <h3 class="footer__title">ALL CATEGORIES</h3>
             <ul class="footer__ul">
@@ -196,13 +203,13 @@
               Social Network
             </h3>
             <div class="footer__social-links">
-              <a href="#" class="footer__link"
+              <a href="#" class="footer__link footer__link--network"
                 ><img src="img/facebook.svg" alt="Icon: facebook"
               /></a>
-              <a href="#" class="footer__link"
+              <a href="#" class="footer__link footer__link--network"
                 ><img src="img/youtube.svg" alt="Icon: youtube"
               /></a>
-              <a href="#" class="footer__link"
+              <a href="#" class="footer__link footer__link--network"
                 ><img src="img/inst.svg" alt="Icon: instagram"
               /></a>
             </div>
@@ -228,7 +235,7 @@
           </div>
           <!-- /.footer__list /.footer__legal -->
           <div class="footer__contact-details">
-            <h3 class="footer__title footer__title--mb-3">Contact Details</h3>
+            <h3 class="footer__title footer__title--mb-26">Contact Details</h3>
             <p class="footer__text">
               Feel free to contact us by phone, email or by our contact form
             </p>
@@ -241,10 +248,12 @@
                     alt="Icon:"
                   />
                 </div>
-                9748 Blossom Hill Rd undefined Lansing, Idaho 68545 United
-                States
+                9748 Blossom Hill Rd undefined<br class="footer__item--br" />
+                Lansing, Idaho 68545 United States
               </li>
-              <li class="footer__item footer__item--mb-2">
+              <li
+                class="footer__item footer__item--mb-2 footer__item--telefone"
+              >
                 <div class="footer__icon-wrapper">
                   <img
                     class="footer__icon"
@@ -261,7 +270,9 @@
                   ><br />
                   <span class="telephone__info-telephone">
                     Tel (hotline) Monday - Saturday:
-                    <a class="telephone__info-link" href="tel:52-56-61-38"
+                    <br class="telephone__info--br" /><a
+                      class="telephone__info-link"
+                      href="tel:52-56-61-38"
                       >52-56-61-38</a
                     >
                     (08:00 am – 20:00 pm)
@@ -271,7 +282,7 @@
                     Tel (hotline) Sunday:
                     <a class="telephone__info-link" href="tel:52-56-61-38"
                       >52-56-61-38</a
-                    >
+                    ><br class="telephone__info--br" />
                     (08:00 am – 14:00 pm)
                   </span>
                 </div>
@@ -288,7 +299,9 @@
           </div>
           <!-- /.footer__contact-details -->
           <div class="footer__contact-form">
-            <h3 class="footer__title footer__title--mb-3">Send us a message</h3>
+            <h3 class="footer__title footer__title--mb-35">
+              Send us a message
+            </h3>
             <form action="send.php" method="POST" class="footer__form form">
               <div class="footer__input-group">
                 <input
@@ -302,10 +315,13 @@
               <div class="footer__input-group">
                 <input
                   type="tel"
-                  class="input footer__input"
+                  class="input footer__input phone_us"
                   placeholder="Phone Number*"
                   name="phone"
                   required
+                  id="phone_us"
+                  maxlength="18"
+                  minlength="18"
                 />
               </div>
               <textarea

@@ -117,7 +117,7 @@ $(document).ready(function () {
     );
   }
 
-  setTimeout(googleMap, 1000);
+  setTimeout(googleMap, 2000);
 
   var map, head, insertBefore, appendChild;
   head = document.getElementsByTagName("head")[0];
